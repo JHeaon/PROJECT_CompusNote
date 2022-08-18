@@ -77,7 +77,7 @@ Figma 를 통해서 UI 디자인을 먼저 한 다음, Django fullstack 을 통�
 
 빠른 구현을 위해서 Django보다 다른 Python web framework 로 fastapi, flask 공부를 해볼까 생각하게 되었습니다. 
 
-
+<br><br>
 
 ### ✌️ Readme.md 에 게시된 내용은 아래 블로그에서도 확인하실수 있습니다. 
 
