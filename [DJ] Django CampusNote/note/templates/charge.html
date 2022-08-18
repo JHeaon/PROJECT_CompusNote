@@ -1,0 +1,224 @@
+{% extends "./home.html"%}
+{% load static %}
+
+
+
+    {% block head %}
+    <title>Charge_page</title>
+    <link rel="stylesheet" href="{% static './CSS/charge.css' %}">
+    <script src="{% static './JS/charge.js' %}"></script>
+    {% endblock head %}
+
+
+
+
+
+            {% block content %}
+                <!-- 첫 번째 흰색 바탕부분 -->
+                <div class="shoppingcart_process">
+                    <div class="shoppingcart">
+                        <div class="pay_coin"><img src="{% static './img/coin.png'%}" alt=""></div>
+                        <p class="cart_font">결제<p>
+                    </div>
+                    <div class="pay_process">
+                        <div class="process_menu"><p>01. 충전/결제</p></div>
+                        <img src="{% static './img/right.png' %}" alt="" class="process_step">
+                        <div class="process_menu"><h2>02. 충전완료</h2></div>
+                    </div>
+                </div>
+
+                <!-- 2번째 흰색 바탕부분 -->
+                <div class="shoppingcart_account_detail">
+                    <div class="detail_ifm">
+                    <div class="shoppingcart">
+                        <div class="crt"><img src="{% static './img/shoppingcart.png' %}" alt=""></div>
+                        <p class="cart_font">내 계좌내역</p>
+                    </div>
+
+                    <div class="detail_account">
+                    <div class="account_bar">｜</div>
+                    <p class="my_account">충전금</p><p class="account_money">0원</p><div class="account_bar">｜</div>
+                    <p class="my_account">수익금</p><p class="account_money">0원</p><div class="account_bar">｜</div>
+                    <p class="my_account">쿠폰</p><p class="account_money">0장</p>
+                    </div>
+
+                    </div>
+                </div>
+
+
+                <!-- 3번째 흰색 바탕부분. 충전금액 선택 -->
+                <div class="charge_box">
+                    <div class="charge_list">
+                        <div class="first_charge">
+                            <div class="price_unit">충전금액 선택<p>가격단위(원)</p></div>
+                            <div class="charge_select">
+                                <ul class="charge_ifm">
+                                    <li class="charge_title">
+                                        <div class="charge_selection">선택</div>
+                                        <div class="charge_price">충전금액</div>
+                                        <div class="plusbenefit">추가 혜택</div>
+                                        <div class="last_price">총 결제금액</div>
+                                    </li>
+                                </ul>
+
+                                <ul class="charge_ifm">
+                                    <li class="charge_title">
+                                        <div class="charge_selection"><input type="checkbox" onclick="check(this)" name="cb1"></div>
+                                        <div class="charge_price">5,000</div>
+                                        <div class="plusbenefit">없음</div>
+                                        <div class="last_price">5,500</div>
+                                    </li>
+                                </ul>
+
+                                <ul class="charge_ifm">
+                                    <li class="charge_title">
+                                        <div class="charge_selection"><input type="checkbox" onclick="check(this)" name="cb2"></div>
+                                        <div class="charge_price">10,000</div>
+                                        <div class="plusbenefit">500원 할인쿠폰</div>
+                                        <div class="last_price">11,000</div>
+                                    </li>
+                                </ul>
+
+                                <ul class="charge_ifm">
+                                    <li class="charge_title">
+                                        <div class="charge_selection"><input type="checkbox" onclick="check(this)" name="cb3"></div>
+                                        <div class="charge_price">20,000</div>
+                                        <div class="plusbenefit">1000원 할인쿠폰</div>
+                                        <div class="last_price">22,000</div>
+                                    </li>
+                                </ul>
+
+                                <ul class="charge_ifm">
+                                    <li class="charge_title">
+                                        <div class="charge_selection"><input type="checkbox" onclick="check(this)" name="cb4"></div>
+                                        <div class="charge_price">30,000</div>
+                                        <div class="plusbenefit">1500원 할인쿠폰</div>
+                                        <div class="last_price">33,000</div>
+                                    </li>
+                                </ul>
+
+                                <ul class="charge_ifm">
+                                    <li class="charge_title">
+                                        <div class="charge_selection"><input type="checkbox" onclick="check(this)" name="cb5"></div>
+                                        <div class="charge_price">50,000</div>
+                                        <div class="plusbenefit">무료 다운로드 2회</div>
+                                        <div class="last_price">55,000</div>
+                                    </li>
+                                </ul>
+
+                                <ul class="charge_ifm">
+                                    <li class="charge_title">
+                                        <div class="charge_selection"><input type="checkbox" onclick="check(this)" name="cb6"></div>
+                                        <div class="charge_price">100,000</div>
+                                        <div class="plusbenefit">무료 다운로드 5회</div>
+                                        <div class="last_price">11,000</div>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+
+
+                        <div class="second_charge">
+                            <div class="price_unit">결제수단 선택</p></div>
+                            <div class="pay">
+                                <ul class="payment_way">
+                                    <li class="charge_title">
+                                        <div class="card">신용카드</div>
+                                        <div class="field">
+                                            <input type="radio" name="crd1" value="1" id="main_crd" />
+                                            <label for="main_crd" class="card_btn">신용카드</label>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                <ul class="payment_way">
+                                    <li class="charge_title">
+                                        <div class="card">간편결제</div>
+                                        <div class="field">
+                                            <input type="radio" name="crd2" value="1" id="main_crd2" />
+                                            <label for="main_crd2" class="card_btn">카카오페이</label>
+                                        </div>
+                                        <div class="field">
+                                            <input type="radio" name="crd3" value="1" id="main_crd3" />
+                                            <label for="main_crd3" class="card_btn">네이버페이</label>
+                                        </div>
+                                        <div class="field">
+                                            <input type="radio" name="crd4" value="1" id="main_crd4" />
+                                            <label for="main_crd4" class="card_btn">토스페이</label>
+                                        </div>
+                                        <div class="field">
+                                            <input type="radio" name="crd5" value="1" id="main_crd5" />
+                                            <label for="main_crd5" class="card_btn">삼성페이</label>
+                                        </div>
+                                        <div class="field">
+                                            <input type="radio" name="crd6" value="1" id="main_crd6" />
+                                            <label for="main_crd6" class="card_btn">페이코</label>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                <ul class="payment_way">
+                                    <li class="charge_title">
+                                        <div class="card">계좌이체</div>
+                                        <div class="field">
+                                            <input type="radio" name="crd7" value="1" id="main_crd7" />
+                                            <label for="main_crd7" class="card_btn">실시간 계좌이체</label>
+                                        </div>
+                                        <div class="field">
+                                            <input type="radio" name="crd8" value="1" id="main_crd8" />
+                                            <label for="main_crd8" class="card_btn">무통장 입금</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                            
+
+
+
+
+
+                        </div>
+
+                    </div>
+                
+              
+     
+
+
+
+
+                    <div class="go_charge">
+                        <a href={% url "chargecomplete"%} class="charge_btn">충전하기</a>
+                    </div>
+    
+
+
+
+                </div>
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+        {% endblock content %}
+    </section>
+
+    <!--     <footer>
+        
+    </footer> -->
+</body>
+
+</html>

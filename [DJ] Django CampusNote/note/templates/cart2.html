@@ -1,0 +1,87 @@
+{% extends "./Home.html"%}
+{% load static %}
+
+
+
+{% block head %}
+<title>Campus Note</title>
+<link rel="stylesheet" href="{% static './CSS/cart2.css' %}">
+<script src="{% static './JS/cart.js' %}"></script>
+{% endblock head %}
+
+
+                {% block content %}
+                <div class="shoppingcart_process">
+                    <div class="shoppingcart">
+                        <div class="crt"><img src="{% static './img/shoppingcart.png' %}" alt=""></div>
+                        <p class="cart_font">장바구니<p>
+                    </div>
+                    <div class="pay_process">
+                        <div class="process_menu">01. 장바구니</div>
+                        <img src="{% static './img/right.png' %}" alt="" class="process_step">
+                        <div class="process_menu"><h2>02. 결제</h2></div>
+                        <img src="{% static './img/right.png' %}" alt="" class="process_step">
+                        <div class="process_menu"><h2>03. 결제완료</h2></div>
+                    </div>
+            </div>
+
+                <!-- 2번째 메뉴 -->
+                <div class="shoppingcart_account_detail">
+                    <div class="detail_ifm">
+                    <div class="shoppingcart">
+                        <div class="crt"><img src="{% static './img/shoppingcart.png' %}" alt=""></div>
+                        <p class="cart_font">내 계좌내역</p>
+                    </div>
+
+                    <div class="detail_account">
+                    <div class="account_bar">｜</div>
+                    <p class="my_account">충전금</p><p class="account_money">0원</p><div class="account_bar">｜</div>
+                    <p class="my_account">수익금</p><p class="account_money">0원</p><div class="account_bar">｜</div>
+                    <p class="my_account">쿠폰</p><p class="account_money">0장</p>
+                    </div>
+
+                    </div>
+                </div>
+
+                <!-- 세 번째 흰색 바탕부분 -->
+                <div class="shoppingcart_list">
+                    <div class="all_selection">
+                        <div class="slection_btn">전체선택</div>
+                        <div class="checkbox"><input type="checkbox"  
+                            name='lecture_name' 
+                            value='selectall'
+                            onclick='selectAll(this)'></div>
+                    </div>
+
+                    <div class="shopping_lecture">
+                        <div class="lecture_list">
+                            <h2>1.</h2>
+                            <div><img src="https://cdn.pixabay.com/photo/2015/12/04/17/06/notebook-1076806__340.jpg"
+                                    alt="" class="black_note">
+                            </div>
+
+                            <div class="lecture_ifm">
+                                <input type="checkbox"name='lecture_nm1'>
+                                <p>컴퓨터공학창의설계</p>
+                                <p>2500</p>
+                                <p></p>
+                            </div>
+                        </div>
+
+                    <div class ="btn_img">
+                        <img src="{% static './img/Vector.png' %}" alt="" class="plus_btn">
+                        <img src="{% static './img/right.png' %}" alt="" class="page_right">
+                    </div>  
+
+                    </div>
+
+                    
+                </div>
+                <div class="shoppingcart_order">
+                <div class="odr" onclick="location.href={% url 'payment' %}"><p class="order_btn">주문하기</p></div>
+                </div>
+                </form>
+            </div>
+        </div>
+        {%endblock content %}
+ 

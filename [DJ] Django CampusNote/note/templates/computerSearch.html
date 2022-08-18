@@ -1,0 +1,93 @@
+{% extends "./Home.html" %}
+{% load static %}
+
+
+    {% block head %}
+    <title>computer search</title>
+    <link rel="stylesheet" href="{% static './CSS/computerSearch.css' %}" />
+    <script src="{% static './JS/arrow.js' %}" defer></script>
+    {% endblock head %}
+
+
+    <!-- 화살표 -->
+   
+
+    {% block content %}
+          <div class="form-containe_search">
+            <form action="" method="get">
+              <input id="search" type="text" placeholder="과목을 검색하세요!" />
+            </form>
+            <img
+              id="search_id"
+              src="{% static './img/home/search.svg' %}"
+              alt="검색 돋보기"
+            />
+          </div>
+
+          <!-- 과목 -->
+
+          <div class="form-container_subject">
+            <div class="form-containver_subject_header">
+              <h2 class="form-containver_subject_header_title">컴퓨터공학창의설계</h2>
+              <p class="form-containver_subject_heade_name">박세진</p>
+              <form name="myform" id="myform" method="post" action="./save">
+                <fieldset>
+                  <input type="radio" name="rating" value="1" id="rate1" />
+                  <label for="rate1">⭐</label>
+                </fieldset>
+              
+              
+                <a href="{% url 'sell_upload_form' post.id %}"
+                id="sellbtn"
+                >
+                  판매 등록하기
+                </a>
+              
+            </div>
+            <p class="form-containver_subject_header_time">09:00~10:15</p>
+            <div class="form-container_subject_memo">
+              <img onclick="location.href='bulletinboard/{{post.id}}/Sell_Detail.html'"
+                class="form-container_subject_memo_computer"
+                src="{% static './img/home/memo.png' %}"
+                alt="선택한 필기"
+              />
+              <img
+                class="form-container_subject_memo_computer"
+                src="{% static './img/home/memo.png' %}"
+                alt="선택한 필기"
+              />
+              <img
+                class="form-container_subject_memo_computer"
+                src="{% static './img/home/memo.png' %}"
+                alt="선택한 필기"
+              />
+            </div>
+            <form id="plusbtn" action="">
+              <button
+                id="plusbtn_button"
+                onclick="location.href='posting.html'"
+              >
+                <img
+                  src="{% static './img/computerSearch/plusbtn.png' %}"
+                  alt="더보기"
+                />
+              </button>
+            </form>
+          </div>
+         
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <button class="arrowbtn">
+        <img
+          class="arrowbtn_img"
+          src="{% static './img/home/arrow.svg' %}"
+          alt="화살표"
+        />
+      </button>
+
+    {% endblock content %}
+
+

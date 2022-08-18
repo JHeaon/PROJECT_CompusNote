@@ -1,0 +1,132 @@
+{% extends "./index.html " %} {% load static %} {% block head %}
+<title>Signup</title>
+<link rel="stylesheet" href= "{% static "./CSS/index_signup.css" %}" />
+{%endblock head %} {% block content %}
+
+<form class="champus_right" method="POST">
+  {% csrf_token %}
+  <div id="champus_right_position">
+    <div id="champus_right_id" class="champus_right_title">ID</div>
+    <div class="champus_right_contents">
+      <input
+        type="text"
+        name="id"
+        title="아이디"
+        class="champus_right_id_input"
+        maxlength="15"
+        value=""
+      />
+      <button class="id_btn">중복확인</button>
+    </div>
+  </div>
+
+  <div id="champus_right_position">
+    <div id="champus_right_password" class="champus_right_title">PW</div>
+    <div class="champus_right_contents">
+      <input
+        placeholder="영어,숫자,특수문자 포함 8자리 이상"
+        type="password"
+        name="password"
+        title="비밀번호"
+        class="champus_right_id_input"
+        maxlength="20"
+        value=""
+      />
+      <img src={% static "./img/index_signup/remove_red_eye.svg"%} alt="눈" />
+    </div>
+  </div>
+
+  <div id="champus_right_position" class="champus_right_contents">
+    <div id="champus_right_confirm" class="champus_right_title">PW확인</div>
+    <div class="champu_right_confirm_form">
+      <input
+        type="password"
+        name="password confirm"
+        title="비밀번호 확인"
+        class="champus_right_id_input"
+        maxlength="20"
+        value=""
+      />
+    </div>
+    <img src={% static "./img/index_signup/remove_red_eye.svg"%} alt="눈" />
+  </div>
+
+  <div id="champus_right_position" class="champus_right_nickname_marginBottom">
+    <div id="champus_right_nickname" class="champus_right_title">닉네임</div>
+    <div id="champus_right_bottom" class="champus_right_contents">
+      <input
+        type="text"
+        name="nickname"
+        title="닉네임"
+        class="champus_right_id_input"
+        maxlength="8"
+        value=""
+      />
+    </div>
+  </div>
+
+  <!-- 밑에 -->
+  <div id="champus_right_position">
+    <div id="champus_right_name">이름</div>
+    <div class="champus_right_contents">
+      <input
+        type="text"
+        name="name"
+        title="성명"
+        class="champus_right_id_input"
+        maxlength="10"
+        value=""
+      />
+    </div>
+  </div>
+  <div id="champus_right_position">
+    <div id="champus_right_school">학교</div>
+    <div class="champus_right_contents">
+      <input
+        type="text"
+        placeholder="학교 이름을 검색하세요"
+        name="school"
+        title="학교"
+        class="champus_right_id_input"
+        maxlength="10"
+        value=""
+      />
+      <img src={% static "./img/index_signup/search.svg"%} alt="검색" />
+    </div>
+  </div>
+  <div id="champus_right_position">
+    <div id="champus_right_email">학교 e-mail</div>
+    <div class="champus_right_contents">
+      <input
+        type="email"
+        placeholder="학교에서 지급받은 e-mail을 입력하세요"
+        name="email"
+        title="이메일"
+        class="champus_right_id_input"
+        maxlength="30"
+        value=""
+      />
+      <button class="email_btn">인증하기</button>
+    </div>
+  </div>
+  <div id="champus_right_position">
+    <div id="champus_right_phonenumber">휴대전화</div>
+    <div class="champus_right_contents">
+      <input
+        type="tel"
+        name="phonenumber"
+        title="휴대전화번호"
+        class="champus_right_id_input"
+        maxlength="13"
+        value=""
+      />
+    </div>
+  </div>
+
+  <!-- 회원가입, 취소 버튼 -->
+
+  <button id="sign" type="submit">Sign Up</button>
+
+  <button id="cancel" onclick="location.href={% url 'index' %}">Cancel</button>
+</form>
+{% endblock content%}

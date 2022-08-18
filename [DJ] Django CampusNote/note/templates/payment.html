@@ -1,0 +1,132 @@
+{% extends "./home.html"%}
+{% load static %}
+
+
+
+    {% block head %}
+    <title>pay_page</title>
+    <link rel="stylesheet" href={% static "./CSS/payment.css"%}>
+    <script src="../JS/payment.js"></script>
+    {% endblock head %}
+
+
+    {% block content %}
+                <!-- 첫 번째 흰색 바탕부분 -->
+                <div class="shoppingcart_process">
+                    <div class="shoppingcart">
+                        <div class="pay_coin"><img src={% static './img/coin.png' %} alt=""></div>
+                        <p class="cart_font">결제<p>
+                    </div>
+                    <div class="pay_process">
+                        <div class="process_menu"><h2>01. 장바구니</h2></div>
+                        <img src="{% static './img/right.png' %}" alt="" class="process_step">
+                        <div class="process_menu"><p>02. 결제</p></div>
+                        <img src="{% static './img/right.png' %}" alt="" class="process_step">
+                        <div class="process_menu"><h2>03. 결제완료</h2></div>
+                    </div>
+                </div>
+
+                <!-- 2번째 흰색 바탕부분 -->
+                <div class="shoppingcart_account_detail">
+                    <div class="detail_ifm">
+                    <div class="shoppingcart">
+                        <div class="crt"><img src="{ static './img/shoppingcart.png' %}" alt=""></div>
+                        <p class="cart_font">내 계좌내역</p>
+                    </div>
+
+                    <div class="detail_account">
+                    <div class="account_bar">｜</div>
+                    <p class="my_account">충전금</p><p class="account_money">0원</p><div class="account_bar">｜</div>
+                    <p class="my_account">수익금</p><p class="account_money">0원</p><div class="account_bar">｜</div>
+                    <p class="my_account">쿠폰</p><p class="account_money">0장</p>
+                    </div>
+
+                    </div>
+                </div>
+
+                <!-- 3번째 흰색 바탕부분. 결제 리스트 -->
+            <div class="payment_list">
+                <div class="payment_box">
+                    <div class="pay_ifm"><h2>자료정보</h2></div>
+                    <div class="payment_goods">
+                        <ul class="goods_ifm">
+                            <li class="goods_title">
+                                <div class="goods_num">순번</div>
+                                <div class="goods_name">자료명</div>
+                                <div class="goods_price">금액</div>
+                            </li>
+                        </ul>
+
+                        <ul class="goods_ifm_detail">
+                            <li class="detail_title">
+                            <div class="detail_num">1</div>
+                            <div class="detail_name">컴퓨터공학창의설계</div>
+                            <div class="detail_price">2500원</div>
+                            </li>
+               
+                    </div>
+                </div>
+
+
+                <div class="price_box">
+                    <div class="price_ifm"><h2>총금액/쿠폰</h2></div>
+                    <div class="final_amount">
+                        <ul class="amount_ifm">
+                            <li class="price_title">
+                                <div class="first_price">상품금액</div>
+                                <div class="second_price">금액</div>
+                            </li>
+                        </ul>
+
+                        <ul class="amount_ifm">
+                            <li class="price_title">
+                                <div class="first_price">쿠폰할인</div>
+                                <div class="sale_price">
+                                <div class="coupon_sale"><a href="">쿠폰 적용/조회</a></div>
+                                <p>0원 할인</p></div>
+                            </li>
+                        </ul>
+
+                        <ul class="amount_ifm">
+                            <li class="price_title">
+                                <div class="first_price">적립금</div>
+                                <div class="apply_price">
+                                <div class="save_money"><input type="text" id="sv_money" name="money_sv"></div>
+                                <div class="apply"><a href="#" onclick="chkPoint(65000,7210,5000,100)" id="apply_a">적용</a></div>
+                                <p>0원 할인 / 0원 적립</p></div>
+                            </li>
+                        </ul>
+
+                        <ul class="amount_ifm"> 
+                            <li class="price_title">
+                                <div class="first_price">최종금액</div>
+                                <div class="last_price">금액</div>
+                            </li>
+                        </ul>
+                </div>
+
+
+
+           </div>
+
+           <div class="two_btn">
+                <div class="charge_btn">
+                    <a href={% url 'charge' %}>충전하기</a>
+                </div>
+                
+                <div class="pay_btn">
+                    <a href={% url 'paycomplete'%}>결제하기</a>
+                </div>
+           </div>
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+        {% endblock content %}

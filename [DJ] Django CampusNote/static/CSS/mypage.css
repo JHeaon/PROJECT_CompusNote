@@ -1,0 +1,365 @@
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px */
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+li {
+  list-style-type: none;
+}
+
+a:visited {
+  color: #000;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #2c2f40;
+  position: relative;
+}
+
+header {
+  width: 100%;
+  height: 19.6rem;
+}
+
+.top-left {
+  width: 91rem;
+  height: 15rem;
+  position: absolute;
+  left: 10%;
+  top: 12.6rem;
+  display: flex;
+}
+
+.title {
+  /* position: absolute; */
+  width: 30rem;
+  height: 7rem;
+  left: 10%;
+  top: 12.6rem;
+
+  font-size: 4.5rem;
+  line-height: 6.3rem;
+  color: #ffffff;
+}
+.title a {
+  color: #fff;
+}
+
+.top-menu-box {
+  position: absolute;
+  width: 66rem;
+  height: 8rem;
+  margin: 0;
+  padding: 0;
+  top: 3.5rem;
+  left: 31%;
+}
+.top-menu-box div:first-child {
+  background-color: #4d5a73;
+  color: #fff;
+  z-index: 4;
+  /* left: 456px; */
+}
+.top-menu-box div:first-child a {
+  color: #fff;
+}
+
+.top-menu-box div:nth-child(2) {
+  left: -3rem;
+  z-index: 3;
+}
+.top-menu-box div:nth-child(3) {
+  left: -6rem;
+  z-index: 2;
+  width: 17rem;
+  padding-left: 1rem;
+}
+.top-menu-box div:last-child {
+  left: -11rem;
+  background: rgba(217, 217, 217, 0.9);
+  z-index: 1;
+  padding-left: 1.5rem;
+}
+
+.top-menu {
+  width: 15rem;
+  height: 7.9rem;
+  /* top: 164px; */
+  position: relative;
+  display: inline-block;
+
+  background: #d9d9d9;
+  border-radius: 3rem;
+  box-shadow: 5px 0px 4px rgba(0, 0, 0, 0.25);
+
+  font-size: 2rem;
+  color: #000;
+  line-height: 2.8rem;
+  text-align: center;
+}
+
+.univ-name {
+  position: absolute;
+  width: 22.5rem;
+  height: 5.3rem;
+  right: 10%;
+  top: 15.9rem;
+
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+  color: #ffffff;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+}
+
+.form-base,
+.side-menu-box {
+  display: flex;
+  justify-content: center;
+}
+
+.form-base {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 19.9rem;
+}
+
+.side-menu-box {
+  width: 8rem;
+  height: 50rem;
+
+  position: absolute;
+  right: 6%;
+  top: 2rem;
+
+  flex-direction: column;
+}
+
+.side-menu {
+  width: 7.9rem;
+  height: 15rem;
+  writing-mode: vertical-lr;
+
+  background-color: #d9d9d9;
+  border-radius: 3rem;
+  box-shadow: 5px 0px 4px rgba(0, 0, 0, 0.25);
+
+  font-size: 1.8rem;
+  display: flex;
+  /* align-items: center; */
+  line-height: 12.5rem;
+  justify-content: center;
+}
+.side-menu:first-child {
+  background-color: #bbbaba;
+  z-index: 6;
+}
+.side-menu:nth-child(2) {
+  margin-top: -2rem;
+  z-index: 5;
+}
+.side-menu:last-child {
+  margin-top: -2rem;
+  z-index: 4;
+}
+
+.form-container {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 84%;
+  height: 180rem;
+  /* top: 196px; */
+  padding: 50px 60px 100px;
+
+  background: #f2f2f2;
+  border-width: 2.5px 2.5px 0px 2.5px;
+  border-style: solid;
+  border-color: #2c2f40;
+  box-shadow: 10px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px 30px 0px 0px;
+
+  z-index: 10;
+}
+
+/* My page 구본현 작성 */
+
+.form-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* my page left */
+
+.form-container-left {
+  width: 17%;
+  padding: 7rem 3.5rem 0rem;
+  background-color: white;
+  border-radius: 30px 30px 0px 0px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.form-container-left-top {
+  margin-bottom: 10rem;
+}
+
+.form-container-right {
+  width: 79%;
+  background-color: white;
+  border-radius: 30px 30px 0px 0px;
+}
+
+.form-container-left-top-title,
+.form-container-left-bottom-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  padding-bottom: 1.7rem;
+  border-bottom: 3px solid black;
+  margin-bottom: 1.7rem;
+}
+
+.form-container-left-top-title-list,
+.form-container-left-bottom-title-list {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.form-container-left-top-title-list li,
+.form-container-left-bottom-title-list li {
+  margin-bottom: 1.7rem;
+}
+
+/* my page right */
+
+.form-container-right {
+  padding: 7rem 10rem 0rem;
+  box-sizing: border-box;
+}
+
+/* my page right header */
+
+.form-container-right-header {
+  display: flex;
+  align-items: center;
+  border-bottom: 3px solid #d9d9d9;
+  padding-bottom: 5rem;
+}
+
+.form-container-right-header-img {
+  width: 16%;
+  margin-right: 7rem;
+}
+
+.form-container-right-header-contents h1 {
+  font-size: 4rem;
+  margin-bottom: 2.7rem;
+}
+
+.form-container-right-header-contents button {
+  background-color: #d9d9d9;
+  border-radius: 30px;
+  border: 1px solid black;
+  margin-bottom: 2.7rem;
+}
+
+.form-container-right-header-contents p {
+  font-size: 2.5rem;
+}
+
+/* my page right table */
+
+/* my page right table header */
+
+.form-container-right-table {
+  padding-top: 3.3rem;
+  margin-bottom: 5rem;
+}
+
+.form-container-right-table-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.form-container-right-table h2 {
+  border-bottom: 3px solid black;
+  font-size: 2.5rem;
+  font-weight: 800;
+  padding: 0px 1rem 1.2rem;
+}
+
+.form-container-right-table-header-p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-left: 0.5rem;
+}
+
+/* my page right table contents */
+
+.form-container-right-table-contents {
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border: 2px solid #d9d9d9;
+  margin-bottom: 5rem;
+  box-shadow: 1px 5px 5px #d9d9d9;
+}
+
+.form-container-right-table-contents-category {
+  width: 20%;
+  height: 5rem;
+}
+
+.form-container-right-table-contents thead {
+  background-color: #f1eeee;
+}
+
+.form-container-right-table-contents tr,
+td,
+th {
+  border: 1px solid #d9d9d9;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.form-container-right-table-general {
+  color: #d9d9d9;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: right;
+}
+
+/* footer */
+
+/* Arrow Btn */
+
+.arrowbtn {
+  background-color: #2c2f40;
+  border: 0px solid #2c2f40;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  opacity: 0;
+  transition: all 300ms ease-in;
+  pointer-events: none;
+}
+
+.arrowbtn.visible {
+  opacity: 1;
+  pointer-events: auto;
+  cursor: pointer;
+}

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>구매 요청 글 보기</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
+    <!-- <link rel="stylesheet" href="reset.css"> -->
+    <link
+      rel="stylesheet"
+      href="{% static './CSS/request_detail_style.css' %}"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="top-left">
+        <div class="title"><a href="#">Campus Note</a></div>
+        <div class="top-menu-box">
+          <div class="top-menu"><a href="Home.html">Home</a></div>
+          <div class="top-menu"><a href="Free_board.html">자유게시판</a></div>
+          <div class="top-menu">
+            <a href="bulletinboard.html">과목별 게시판</a>
+          </div>
+          <div class="top-menu"><a href="Q&A.html">문의사항</a></div>
+        </div>
+      </div>
+
+      <div class="univ-name">계명대학교 OOO님</div>
+    </header>
+
+    <section>
+      <div class="form-base">
+        <div class="side-menu-box">
+          <div class="side-menu"><a href="mypage.html">마이페이지</a></div>
+          <div class="side-menu"><a href="cart2.html">장바구니</a></div>
+          <div class="side-menu"><a href="">로그아웃</a></div>
+        </div>
+
+        <div class="form-container">
+          <div class="post-top-box">
+            <p>대충 여기에는 수업명이 들어갈 것 같네용</p>
+            <p>[구매] 빅데이터와 인공지능 3주차 강의 필기</p>
+            <div class="post-top-box-lastpart">
+              <div class="profile-box">
+                <div class="profile-img">
+                  <img
+                    src="{% static './img/profile-sample.png' %}"
+                    alt="프로필"
+                  />
+                </div>
+                <div class="profile-data">
+                  <div>
+                    <span>ㅅㅈㄱ(코딩천재)</span>
+                    <span>
+                      <img src="{% static './img/Star.png' %}" alt="등급" />
+                      <span>(골드, 판매 횟수 OO회)</span>
+                    </span>
+                  </div>
+                  <div>
+                    <span>2022.07.19. 18:18</span>
+                    <span>
+                      <img src="{% static './img/view.png' %}" alt="조회수" />
+                      <span>100</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 본문 내용 -->
+          <div class="post-mid-box">
+            <p>여기는 본문입니다ㅏㅏㅏ</p>
+
+            <div class="heart-comment-view">
+              <img src="{% static './img/heart.png %'}" alt="" />
+              <span>1</span>
+              &nbsp;
+              <img src="{% static './img/comment.png' %}" alt="" />
+              <span>1</span>
+            </div>
+          </div>
+
+          <!-- 하단 버튼들 -->
+          <div class="bottom-button-box">
+            <div>
+              <button
+                class="post-btn"
+                onclick="location.href='Common_Upload_Form.html'"
+              >
+                <span>글쓰기</span>
+              </button>
+            </div>
+            <div>
+              <div>
+                <button class="post-btn" name="1by1">
+                  <span>1:1 문의</span>
+                </button>
+                <button class="post-btn" name="pre">
+                  <span>이전글</span>
+                </button>
+                <button class="post-btn" name="next">
+                  <span>다음글</span>
+                </button>
+                <button class="post-btn" name="list">
+                  <span>목록</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 댓글 입력 -->
+          <div class="comment-input-area">
+            <div>
+              <span>댓글</span>
+              <span>최신순</span>
+              <span>오래된순</span>
+            </div>
+            <div>
+              <div class="comment-input-box">
+                <p>nickname</p>
+                <input
+                  type="text"
+                  name="comment"
+                  id=""
+                  placeholder="내용을 입력하세요"
+                /><br />
+                <img src="{% static './img/photo.png' %}" alt="" />
+                <img src="{% static './img/emoge.png' %}" alt="" />
+              </div>
+              <div class="submit-btn">
+                <input type="submit" value="등록" />
+              </div>
+            </div>
+          </div>
+
+          <!-- 댓글 -->
+          <div class="comment">
+            <li class="comment-view">
+              <div class="comment-box">
+                <div class="comment-img">
+                  <img
+                    src="{% static './img/profile-sample.png' %}"
+                    alt="프로필"
+                  />
+                </div>
+
+                <div class="comment-data">
+                  <div>
+                    <span>ㅅㅈㄱ(코딩천재)</span>
+                    <span>
+                      <img src="{% static './img/Star.png' %}" alt="등급" />
+                      <span>(골드, 판매 횟수 OO회)</span>
+                    </span>
+                  </div>
+                  <div class="comment-content">
+                    <span>여기에 댓글 내용이 들어가요</span>
+                  </div>
+                  <div>
+                    <div>
+                      <span>2022.07.19. 18:18</span>
+                      <div>답글쓰기</div>
+                    </div>
+                    <div>
+                      <div>수정</div>
+                      <div>삭제</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <div>
+              <div class="reple-input-box">
+                <p>nickname</p>
+                <input
+                  type="text"
+                  name="reple"
+                  id=""
+                  placeholder="내용을 입력하세요"
+                /><br />
+                <div>
+                  <div>
+                    <img src="{% static './img/photo.png' %}" alt="" />
+                    <img src="{% static './img/emoge.png' %}" alt="" />
+                  </div>
+                  <div>
+                    <input type="submit" value="등록" name="reple-submit" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--     <footer>
+        
+    </footer> -->
+  </body>
+</html>

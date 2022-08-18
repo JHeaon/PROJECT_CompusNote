@@ -1,0 +1,211 @@
+{% extends "./Home.html" %} {% load static %}
+
+
+    {% block head %}
+    <title>Campus Note</title>
+    <!-- <link rel="stylesheet" href="reset.css"> -->
+    <link rel="stylesheet" href={% static "./CSS/mypage.css"%} />
+    <script src="./JS/arrow.js" defer></script>
+    {% endblock head %}
+
+
+        <!-- My page 내용 -->
+        <div class="form-container">
+          <!-- My page left -->
+
+          {% block content %}
+          <div class="form-container-left">
+            <div class="form-container-left-top">
+              <div class="form-container-left-top-title">마이페이지</div>
+              <ul class="form-container-left-top-title-list">
+                <li>
+                  <a href="#">내 판매자 정보</a>
+                </li>
+                <li>
+                  <a href="#">내 정보 변경</a>
+                </li>
+                <li>
+                  <a href="#">포인트 사용 정보</a>
+                </li>
+              </ul>
+            </div>
+            <div class="form-container-left-bottom">
+              <div class="form-container-left-bottom-title">환경설정</div>
+              <ul class="form-container-left-bottom-title-list">
+                <li>
+                  <a href="#">내 판매자 정보</a>
+                </li>
+                <li>
+                  <a href="#">내 정보 변경</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- My page right -->
+
+          <div class="form-container-right">
+            <!-- My page right header -->
+            <div class="form-container-right-header">
+              <div class="form-container-right-header-img">
+                <img src={% static "./img/mypage/people.png"%} alt="회원이미지" />
+              </div>
+              <div class="form-container-right-header-contents">
+                <h1>전종원 님</h1>
+                <button>공학 / 기술</button>
+                <button>공통 교양</button>
+                <p>안녕하세요 전종원 입니다.</p>
+                <br />
+                <p>계명대학교 공과대학 재학중입니다.</p>
+              </div>
+            </div>
+
+            <!-- My page right table -->
+
+            <div class="form-container-right-table">
+              <div class="form-container-right-table-header">
+                <h2>판매자료</h2>
+                <p class="form-container-right-table-header-p">(3)</p>
+              </div>
+              <table class="form-container-right-table-contents">
+                <thead>
+                  <tr>
+                    <th class="form-container-right-table-contents-category">
+                      카테고리
+                    </th>
+                    <th>자료명</th>
+                    <th>가격</th>
+                    <th>등록일</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="form-container-right-table-contents-category">
+                      노트 정리
+                    </td>
+                    <td>컴공창 1-1주차 노트 정리</td>
+                    <td>1000P</td>
+                    <td>22.07.19</td>
+                  </tr>
+                  <tr>
+                    <td class="form-container-right-table-contents-category">
+                      노트 정리
+                    </td>
+                    <td>컴공창 1-2주차 노트 정리</td>
+                    <td>1500P</td>
+                    <td>22.06.19</td>
+                  </tr>
+                  <tr>
+                    <td class="form-container-right-table-contents-category">
+                      노트 정리
+                    </td>
+                    <td>공모전의 이해 1-2주차 노트 정리</td>
+                    <td>2000P</td>
+                    <td>22.05.29</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a href="#"
+                ><p class="form-container-right-table-general">전체보기 ></p></a
+              >
+            </div>
+            <div class="form-container-right-table">
+              <div class="form-container-right-table-header">
+                <h2>구매자료</h2>
+                <p class="form-container-right-table-header-p">(3)</p>
+              </div>
+              <table class="form-container-right-table-contents">
+                <thead>
+                  <tr>
+                    <th class="form-container-right-table-contents-category">
+                      카테고리
+                    </th>
+                    <th>자료명</th>
+                    <th>가격</th>
+                    <th>등록일</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="form-container-right-table-contents-category">
+                      노트 정리
+                    </td>
+                    <td>계명정신과 봉사 총정리본</td>
+                    <td>2000P</td>
+                    <td>22.04.19</td>
+                  </tr>
+                  <tr>
+                    <td class="form-container-right-table-contents-category">
+                      노트 정리
+                    </td>
+                    <td>일반 화학(1) 2주차 노트 정리</td>
+                    <td>1500P</td>
+                    <td>22.06.19</td>
+                  </tr>
+                  <tr>
+                    <td class="form-container-right-table-contents-category">
+                      노트 정리
+                    </td>
+                    <td>공모전의 이해 1-2주차 노트 정리</td>
+                    <td>2000P</td>
+                    <td>22.05.29</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a href="#"
+                ><p class="form-container-right-table-general">전체보기 ></p></a
+              >
+            </div>
+            <div class="form-container-right-table">
+              <div class="form-container-right-table-header">
+                <h2>자료 후기</h2>
+                <p class="form-container-right-table-header-p">(14)</p>
+              </div>
+              <table class="form-container-right-table-contents">
+                <thead>
+                  <tr>
+                    <th class="form-container-right-table-contents-category">
+                      아이디
+                    </th>
+                    <th>자료명</th>
+                    <th>자료 후기 내용</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="form-container-right-table-contents-category">
+                      mized97
+                    </td>
+                    <td>컴공창 1-1주차 노트 정리</td>
+                    <td>읽기 편한 필기 내용이었습니다 ㅠㅠ 감사합니다</td>
+                  </tr>
+                  <tr>
+                    <td class="form-container-right-table-contents-category">
+                      j3heaiiwk
+                    </td>
+                    <td>컴공창 1-2주차 노트 정리</td>
+                    <td>잘 봤습니다 감사합니다</td>
+                  </tr>
+                  <tr>
+                    <td class="form-container-right-table-contents-category">
+                      kk928977
+                    </td>
+                    <td>공모전의 이해 1-2주차 노트 정리</td>
+                    <td>
+                      혹시 이거 전 날 자료도 올려주실 수 있나요? 그 날 제가
+                      학교를 못 가서 ㅠ
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <a href="#"
+                ><p class="form-container-right-table-general">전체보기 ></p></a
+              >
+            </div>
+          </div>
+          {% endblock content %}
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

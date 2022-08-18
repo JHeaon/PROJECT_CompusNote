@@ -1,0 +1,146 @@
+{% extends "./Home.html" %}
+{% load static %}
+
+
+    {% block head %}
+    <title>posting</title>
+    <link rel="stylesheet" href={% static "./CSS/posting.css"%} />
+    <script src="./JS/arrow.js" defer></script>
+    {% endblock head %}
+  </head>
+  <body>
+    <header>
+      <div class="top-left">
+        <div class="title"><a href="#">Campus Note</a></div>
+        <div class="top-menu-box">
+          <div class="top-menu"><a href="Home.html">Home</a></div>
+          <div class="top-menu"><a href="Free_board.html">자유게시판</a></div>
+          <div class="top-menu">
+            <a href="bulletinboard.html">과목별 게시판</a>
+          </div>
+          <div class="top-menu"><a href="Q&A.html">문의사항</a></div>
+        </div>
+      </div>
+
+      <div class="univ-name">계명대학교 OOO님</div>
+    </header>
+
+    <!-- 화살표 -->
+    <button type="button" class="arrowbtn">
+      <img class="arrowbtn_img" src="../img/home/arrow.svg" alt="화살표" />
+    </button>
+
+    <section>
+      <div class="form-base">
+        <div class="side-menu-box">
+          <div class="side-menu"><a href="mypage.html">마이페이지</a></div>
+          <div class="side-menu"><a href="cart2.html">장바구니</a></div>
+          <div class="side-menu"><a href="">로그아웃</a></div>
+        </div>
+
+        <div class="form-container">
+          <!-- 검색창 -->
+
+          <div class="form-containe_search">
+            <form action="" method="get">
+              <input id="search" type="text" placeholder="과목을 검색하세요!" />
+            </form>
+            <img
+              id="search_id"
+              src="../img/home/search.svg"
+              alt="검색 돋보기"
+            />
+            <div class="form-containe_search_align">
+              <a class="form-containe_search_align_after" href="">최신순</a>
+              <a class="form-containe_search_align_after" href="">판매순</a>
+              <a href="">별표순</a>
+            </div>
+          </div>
+
+          <!-- 과목 -->
+
+          <div class="form-container_subject">
+            <div class="form-containver_subject_header">
+              <h2 class="form-containver_subject_header_title">컴퓨터공학</h2>
+              <p class="form-containver_subject_heade_name">한무명초</p>
+              <form name="myform" id="myform" method="post" action="./save">
+                <fieldset>
+                  <input type="radio" name="rating" value="1" id="rate1" />
+                  <label for="rate1">⭐</label>
+                </fieldset>
+              </form>
+              <form action="">
+                <button
+                  id="sellbtn"
+                  onclick="location.href='Sell_Upload_Form.html'"
+                >
+                  판매 등록하기
+                </button>
+              </form>
+            </div>
+            <p class="form-containver_subject_header_time">09:00~10:15</p>
+            <div class="form-container_subject_memo">
+              <img
+                class="form-container_subject_memo_computer"
+                src="../img/home/memo.png"
+                alt="선택한 필기"
+              />
+              <img
+                class="form-container_subject_memo_computer"
+                src="../img/home/memo.png"
+                alt="선택한 필기"
+              />
+              <img
+                class="form-container_subject_memo_computer"
+                src="../img/home/memo.png"
+                alt="선택한 필기"
+              />
+            </div>
+            <div class="form-container_subject_memo">
+              <img
+                class="form-container_subject_memo_computer"
+                src="../img/home/memo.png"
+                alt="선택한 필기"
+              />
+              <img
+                class="form-container_subject_memo_computer"
+                src="../img/home/memo.png"
+                alt="선택한 필기"
+              />
+              <img
+                class="form-container_subject_memo_computer"
+                src="../img/home/memo.png"
+                alt="선택한 필기"
+              />
+            </div>
+            <div class="form-container_subject_memo">
+              <img
+                class="form-container_subject_memo_computer"
+                src="../img/home/memo.png"
+                alt="선택한 필기"
+              />
+              <img
+                class="form-container_subject_memo_computer"
+                src="../img/home/memo.png"
+                alt="선택한 필기"
+              />
+              <img
+                class="form-container_subject_memo_computer"
+                src="../img/home/memo.png"
+                alt="선택한 필기"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <!-- 화살표 -->
+
+      <button class="arrowbtn">
+        <img class="arrowbtn_img" src="../img/home/arrow.svg" alt="화살표" />
+      </button>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="캠퍼스노트 인덱스" />
+    <meta name="author" content="Campus Note" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
+    {% block head %}
+    <title>Index</title>
+    <link rel="stylesheet" href= "{% static "./CSS/index.css" %}" />
+    {% endblock head %}
+
+
+    
+    <script src= {% static "main.js" %} defer></script>
+  </head>
+
+  <body>
+    <article id="index">
+      <!-- Champus Left -->
+      <div class="champus_left">
+        <img
+          class="champus_left_logo"
+          src="{% static './img/index/Group 305.svg' %}"
+          alt="캠퍼스 노트 로고"
+        />
+        <p class="champus_left_title">"노트에 가치를 더하다"</p>
+      </div>
+
+      <!-- Champus Right -->
+      {% block content %}
+
+      <form class="champus_right" action="" method="POST">
+        {% csrf_token %}
+        <div class="champus_right_top">
+          <a href={% url "home" %} class="champus_right_top_sentence">Login</a>
+          <a href={% url "index_signup" %}>Sign up</a>
+        </div>
+        <img
+          class="champus_right_loginImg"
+          src={% static "./img/index/account_circle.svg"%}
+          alt="로그인"
+        />
+        <div class="champus_right_id">
+          <img
+            class="champus_right_id_img"
+            src={% static "./img/index/person.svg"%}
+            alt="사람"
+          />
+
+          <input
+            type="text"
+            name="id"
+            title="아이디"
+            class="champus_right_id_input"
+            maxlength="20"
+            value=""
+          />
+        </div>
+        <div class="champus_right_password">
+          <div class="champus_right_password_flex">
+            <img src={% static "./img/index/lock.svg"%} alt="자물쇠" />
+
+            <input
+              type="password"
+              name="password"
+              title="비밀번호"
+              class="champus_right_password_flex_input"
+              maxlength="20"
+              value=""
+            />
+
+            <img src={% static "./img/index/remove_red_eye.svg"%} alt="눈" />
+          </div>
+        </div>
+        <div class="champus_right_login" onclick="">
+          <a href={% url "home" %}>Login</a>
+        </div>
+
+        <a class="champus_right_forget" href="">Forget Password?</a>
+      </form>
+      {% endblock content %}
+    </article>
+  </body>
+</html>

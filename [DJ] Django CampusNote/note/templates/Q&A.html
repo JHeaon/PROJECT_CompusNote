@@ -1,0 +1,72 @@
+{% extends "./Home.html"%} {%load static%}
+
+
+{% block head %}
+<title>문의사항</title>
+<link rel="stylesheet" href={% static "./CSS/q&a_style.css" %}>
+{% endblock head %}
+
+{% block content%}
+ 
+              <!-- 게시판 제목 -->
+              <div class="board-title">
+                <span>문의사항</span>
+                <div></div>
+              </div>
+
+              <div class="list-title">
+                <div>No</div>
+                <div>태그</div>
+                <div>제목</div>
+                <div>글쓴이</div>
+                <div>작성날짜</div>
+              </div>
+
+              <!-- 게시판 리스트 -->
+              <div class="board-list">
+                <li>
+                  <div>*</div>
+                  <div>공지</div>
+                  <div>이용시 주의사항</div>
+                  <div>관리자</div>
+                  <div>2022-07-21</div>
+                </li>
+                {% for post in posts%}
+                <li>
+                  <div>{{post.id}}</div>
+                  <div><img src= '{% static "./img/lock.png" %}' /></div>
+                  <div><a href = {% url "Q&A_detail" post.id %}>{{post.title}}</a></div>
+                  <div>관리자</div>
+                  <div>{{post.dt_created.date|date:"Y-m-d"}}</div>
+                </li>
+                {% endfor %}
+                
+
+              <div class="write-btn-area">
+                <button
+                  class="write-btn"
+                  onclick="location.href={% url 'QA_upload_form' %}"
+                >
+                  글쓰기
+                </button>
+              </div>
+
+              <div class="pagination">
+                <a href="#">이전</a>
+                <a class="active" href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">다음</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--     <footer>     
+    </footer> -->
+      </body>
+    </html>
+  </body>
+</html>
+{% endblock content %}

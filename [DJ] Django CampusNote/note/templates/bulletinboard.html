@@ -1,0 +1,40 @@
+{% extends "./Home.html "%} {% load static %} {% block head %}
+<title>Document</title>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+/>
+<!-- <link rel="stylesheet" href="reset.css"> -->
+<link rel="stylesheet" href="{% static './CSS/bulletinboard.css' %}" />
+{% endblock head %} {% block content %}
+<!-- 검색한 과목 -->
+
+<div class="form-containe_search">
+  <input id="glasses" type="text" placeholder="과목을 검색하세요!" name="lect_search">
+  <img id="glasses_id" src= {% static "./img/glasses.png"%} alt="검색 돋보기" width="2.5%" />
+</div>
+
+<div id="search_list">
+  {% for post in posts %}
+  <!-- 과목1 -->
+  <div class="lecture_search">
+    <!-- 좌측 -->
+    <div class="left_search" onclick="location.href='{% url "computersearch" post.id %}'">
+      <h1>{{post.title}}</h1>
+      <p>{{post.professor}}</p>
+      <form name="myform" id="myform" method="post" action="./save">
+        <fieldset>
+          <input type="checkbox" name="rating" value="1" id="rate1" />
+          <label for="rate1">⭐</label>
+        </fieldset>
+      </form>
+    </div>
+
+    <!-- 우측 -->
+    <div class="right_search">
+      <p>게시판갯수</p>
+    </div>
+  </div>
+
+  {% endfor %} {% endblock content %}
+</div>

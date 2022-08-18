@@ -1,0 +1,129 @@
+{% extends "./home.html"%} {% load static %}
+
+{% block head %}
+    <title>판매 글 보기</title>
+    <link rel="stylesheet" href={% static './CSS/sell_detail_style.css' %} />
+    {% endblock head %}
+  {% block content%}
+          <div class="post-top-box">
+            <p>수업명 : 컴퓨터 공학창의 설계</p>
+            <p>[판매] 컴퓨터공학창의설계 필기 팔아요~</p>
+            <div class="post-top-box-lastpart">
+              <div class="profile-box">
+                <div class="profile-img">
+                  <img
+                    src="{% static './img/profile-sample.png' %}"
+                    alt="프로필"
+                  />
+                </div>
+                <div class="profile-data">
+                  <div>
+                    <span>ㅅㅈㄱ(코딩천재)</span>
+                    <span>
+                      <img src="{% static './img/Star.png' %}" alt="등급" />
+                      <span>(골드, 판매 횟수 OO회)</span>
+                    </span>
+                  </div>
+                  <div>
+                    <span>2022.07.19. 18:18</span>
+                    <span>
+                      <img src="{% static './img/view.png' %}" alt="조회수" />
+                      <span>100</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="btn-box">
+                <div>
+                  <span>2500원</span>
+                </div>
+                <button onclick="location.href='payment.html'">
+                  <span>구매</span>
+                </button>
+                <div>
+                  <img
+                    onclick="location.href={% url 'cart2'%}"
+                    src="{% static './img/post-cart.png' %}"
+                    alt="장바구니"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 본문 내용 -->
+          <div class="post-mid-box">필기 팔아봅니다~ 2500원에 올릴께요 </div>
+
+          <!-- 미리보기 -->
+          <div class="preview-box">
+            <span>미리보기</span>
+            <div class="preview-img">
+              <img src="{% static './img/preview-sample.png' %}" alt="" />
+            </div>
+          </div>
+
+          <!-- 하단 버튼들 -->
+          <div class="bottom-button-box">
+            <div>
+              <button
+                class="post-btn"
+                onclick="location.href='Sell_Upload_Form.html'"
+              >
+                <span>글쓰기</span>
+              </button>
+            </div>
+            <div>
+              <div>
+                <button class="post-btn" name="1by1">
+                  <span>1:1 문의</span>
+                </button>
+                <button class="post-btn" name="pre">
+                  <span>이전글</span>
+                </button>
+                <button class="post-btn" name="next">
+                  <span>다음글</span>
+                </button>
+                <button class="post-btn" name="list">
+                  <span>목록</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 후기 -->
+          <div class="review-box">
+            <span>상품후기</span>
+
+            <div>
+              <div>
+                <div class="review-view-box">
+                  <input
+                    type="text"
+                    name="review=title"
+                    id=""
+                    placeholder="제목을 입력하세요"
+                    class="review-input"
+                  />
+                  <input
+                    type="text"
+                    name="review-content"
+                    class="review-input-content"
+                    placeholder="내용을 입력하세요"
+                  />
+                </div>
+                <span>저장</span>
+                <span>삭제</span>
+              </div>
+              <div class="review-view-box"></div>
+              <div class="review-view-box"></div>
+              <div class="review-view-box"></div>
+
+              <button class="right-btn">
+                <img src="{% static './img/right-arrow.png' %}" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      {%endblock content%}
+   

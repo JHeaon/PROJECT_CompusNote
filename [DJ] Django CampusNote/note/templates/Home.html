@@ -1,0 +1,136 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
+    {% block head %}
+    <link rel="stylesheet" href="{% static './CSS/home.css'%}" />
+    <script src={% static "./JS/arrow.js" %} defer></script>
+    <title>Home</title>
+    {% endblock head %}
+  </head>
+  
+  <body>
+    <header>
+      <div class="top-left">
+        <div class="title"><a href="{% url 'home'%}">Campus Note</a></div>
+        <div class="top-menu-box">
+          <div class="top-menu"><a href={% url 'home' %}>Home</a></div>
+          <div class="top-menu"><a href={% url 'free_board'%}>자유게시판</a></div>
+          <div class="top-menu"><a href={% url 'bulletinboard' %}>과목별 게시판</a></div>
+          <div class="top-menu"><a href={% url 'Q&A' %}>문의사항</a></div>
+        </div>
+      </div>
+
+      <div class="univ-name">계명대학교 전종원</div>
+    </header>
+
+    
+    <!-- 화살표 -->
+    
+    <section>
+      <div class="form-base">
+        <div class="side-menu-box">
+          <div class="side-menu"><a href={% url "mypage" %}>마이페이지</a></div>
+          <div class="side-menu"><a href={% url "cart2"%}>장바구니</a></div>
+          <div class="side-menu"><a href={% url "index"%}>로그아웃</a></div>
+        </div>
+
+        <div class="form-container">
+          <!-- 검색창 -->
+          {% block content %}
+
+          <button type="button" class="arrowbtn">
+            <img class="arrowbtn_img" src= {% static "./img/home/arrow.svg" %} alt="화살표" />
+          </button>
+          
+
+      
+          <div class="form-containe_search">
+            <form action="" method="get">
+              <input id="search" type="text" placeholder="과목을 검색하세요!" />
+            </form>
+            <img
+              id="search_id"
+              src={% static "./img/home/search.svg" %}
+              alt="검색 돋보기"
+            />
+          </div>
+
+          <!-- 과목 -->
+
+          <div class="form-container_subject">
+            <div class="form-containver_subject_header">
+              <h2 class="form-containver_subject_header_title">컴퓨터공학</h2>
+              <p class="form-containver_subject_header_time">09:00~10:15</p>
+              <form name="myform" id="myform" method="post" action="./save">
+                <fieldset>
+                  <input type="radio" name="rating" value="1" id="rate1" />
+                  <label for="rate1">⭐</label>
+                </fieldset>
+              </form>
+            </div>
+            <div class="form-container_subject_memo">
+              <img onclick="location.href={% url 'sell_detail'%}"
+                class="form-container_subject_memo_computer"
+                src= {% static "./img/home/memo.png" %}
+                alt="선택한 필기"
+              />
+              <img
+                class="form-container_subject_memo_computer"
+                src={% static "./img/home/memo.png" %}
+              />
+              <img
+                class="form-container_subject_memo_computer"
+                src={% static "./img/home/memo.png" %}
+                alt="선택한 필기"
+              />
+            </div>
+          </div>
+          <div class="form-container_subject">
+            <div class="form-containver_subject_header">
+              <h2 class="form-containver_subject_header_title">컴퓨터 공학 창의 설계</h2>
+              <p class="form-containver_subject_header_time">10:30~12:00</p>
+
+              <form name="myform" id="myform" method="post" action="./save">
+                <fieldset>
+                  <input type="radio" name="rating" value="1" id="rate1" />
+                  <label for="rate1">⭐</label>
+                </fieldset>
+              </form>
+            </div>
+            <div class="form-container_subject_memo">
+              <img
+                class="form-container_subject_memo_computer"
+                src={% static "./img/home/memo.png" %}
+                alt="선택한 필기"
+              />
+              <img
+                class="form-container_subject_memo_computer"
+                src={% static "./img/home/memo.png" %}
+                alt="선택한 필기"
+              />
+              <img
+                class="form-container_subject_memo_computer"
+                src={% static "./img/home/memo.png" %}
+                alt="선택한 필기"
+              />
+            </div>
+          </div>
+          {% endblock content %}
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <!-- 화살표 -->
+    </footer>
+  </body>
+</html>

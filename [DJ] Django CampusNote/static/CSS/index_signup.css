@@ -1,0 +1,206 @@
+/* Global */
+
+/* Universal tags */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  cursor: default;
+  background-color: #d9d9d9;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+input,
+input:focus {
+  border: 0px solid white;
+  outline: none;
+}
+
+/* champus_left */
+
+#index {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.champus_left {
+  color: white;
+  background-color: #2c2f40;
+  width: 29%;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.champus_left_title {
+  margin: 0px 10px 0px 0px;
+}
+
+.champus_left_logo {
+  margin-left: 40px;
+}
+
+/* Champus Right */
+
+.champus_right {
+  color: #2c2f40;
+  background-color: white;
+  border: 4px solid #2c2f40;
+  width: 29%;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+#champus_right_position {
+  position: relative;
+}
+
+#champus_right_id {
+  position: absolute;
+  left: -11%;
+}
+
+#champus_right_password {
+  position: absolute;
+  left: -14%;
+}
+
+#champus_right_confirm {
+  position: absolute;
+  left: -27%;
+}
+#champus_right_nickname {
+  position: absolute;
+  left: -23%;
+}
+
+#champus_right_name {
+  position: absolute;
+  left: -17%;
+}
+
+#champus_right_school {
+  position: absolute;
+  top: 20%;
+  left: -17%;
+}
+
+#champus_right_email {
+  position: absolute;
+  left: -40%;
+}
+
+#champus_right_phonenumber {
+  position: absolute;
+  left: -29%;
+}
+
+.champus_right_nickname_marginBottom {
+  margin-bottom: 2.2rem;
+}
+
+.champu_right_confirm_form {
+  width: 100%;
+}
+
+.champus_right_contents {
+  width: 225px;
+  border-bottom: 4px solid #d9d9d9;
+  margin: 0px;
+  margin-bottom: 18px;
+  display: flex;
+}
+
+.champus_right_contents form {
+  width: 100%;
+}
+
+.champus_right_id_input {
+  width: 100%;
+}
+
+.champus_right_id_input::placeholder {
+  text-align: center;
+  font-size: 0.3rem;
+  color: #b5b3b3;
+}
+
+.id_btn {
+  color: #f5f5f5;
+  background-color: #d9d9d9;
+  border-radius: 10px;
+  font-size: 0.4rem;
+  width: 64px;
+  height: 24px;
+  position: absolute;
+  top: -15%;
+  right: -29%;
+  z-index: 1;
+}
+
+.email_btn {
+  color: #f5f5f5;
+  background-color: #d9d9d9;
+  border-radius: 10px;
+  font-size: 0.4rem;
+  width: 64px;
+  height: 24px;
+  position: absolute;
+  top: -15%;
+  right: -29%;
+  z-index: 1;
+}
+
+/* 회원가입 취소 버튼 */
+
+#sign {
+  width: 225px;
+  height: 34px;
+  font-size: 1rem;
+  color: white;
+  background-color: #2c2f40;
+  margin-top: 8px;
+  margin-bottom: 5px;
+}
+
+#cancel {
+  width: 225px;
+  height: 34px;
+  font-size: 1rem;
+  color: white;
+  background-color: #d9d9d9;
+}
